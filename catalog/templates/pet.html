@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="d-flex justify-content-center">
+    <div class="card mt-2" style="width:500px;">
+          <img class="card-img-top" src="{{ pet.image.url }}" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{ pet.name }}</h5>
+              <p class="card-text"><b>Shelter:</b> {{pet.shelter}} ({{pet.shelter.address}})</p>
+              <p class="card-text"><b>Date Arrival:</b> {{pet.datearrival}}</p>
+              <p class="card-text"><b>Breed:</b> {{pet.breed}}</p>
+              <p class="card-text"><b>Host:</b> {{pet.host}}</p>
+          </div>
+    </div>
+</div>
+{% endblock %}

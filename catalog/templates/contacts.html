@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h4>Our Contacts:</h4>
+                <b>Phone: </b>+1 (23) 98-371-982
+
+        </div>
+        {% for shelter in shelters %}
+        <div class="col-12">
+            <b>{{shelter.title}}</b> ({{ shelter.address }})
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
